@@ -11,10 +11,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Гілка, в яку буде задеплоєний сайт
           folder: .  # Папка з файлами для деплою
+           token: ${{ secrets.GITHUB_TOKEN }}  # Додає токен для автентифікаціїs
