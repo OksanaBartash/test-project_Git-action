@@ -18,4 +18,5 @@ jobs:
         with:
           branch: gh-pages  # Гілка, в яку буде задеплоєний сайт
           folder: .  # Папка з файлами для деплою
-           token: ${{ secrets.GITHUB_TOKEN }}  # Додає токен для автентифікаціїs
+          token: ${{ secrets.GITHUB_TOKEN }}  # Додає токен для автентифікації
+
