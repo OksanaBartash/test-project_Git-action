@@ -8,14 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Clear GitHub Actions cache
+        run: |
+          rm -rf ~/.cache
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Гілка для розміщення сайту
-          folder: .  # Папка з файлами для деплою
-          token: ${{ secrets.GITHUB_TOKEN }}  # Використовуй токен для автентифікації
+          branch: gh-pages
+          folder: .
+          token: ${{ secrets.GITHUB_TOKEN }}
