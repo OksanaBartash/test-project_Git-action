@@ -1,0 +1,379 @@
+@font-face {
+    font-family: raleway_f;
+    src: url(../fonts/Raleway-VariableFont_wght.ttf);
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'raleway_f';
+    color: #fff;
+}
+
+
+/* ================= mobile version ================= */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.header .context {
+    max-width: 600px;
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop)/8), 0);
+    will-change: transform;
+    margin-top: calc(var(--index)*64);
+    position: fixed;
+    font-family: 'raleway_f';
+    text-align: center;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+}
+
+span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+    animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+    animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+    animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+    animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+    animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+    animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+    animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+    animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+    animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(19) {
+    animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.header .context .title {
+    font-size: calc(var(--index)*3.5);
+    letter-spacing: calc(var(--index)/3);
+    font-weight: 600;
+}
+
+.header .context .text {
+    font-size: calc(var(--index)*1.175);
+    letter-spacing: calc(var(--index)*0.2);
+    font-weight: 400;
+    margin-top: calc(var(--index)*1.5);
+}
+
+.header .context .subtitle {
+    font-size: calc(var(--index)*1.5);
+    letter-spacing: calc(var(--index)*0.05);
+    font-weight: 800;
+    margin-top: calc(var(--index)*2);
+}
+
+
+
+.small-leaves {
+    position: relative;
+}
+
+.small-leaves .layers {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.small-leaves .layers .layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+}
+
+.small-leaves .layers .layers__base {
+    display: block;
+    background-image: url(../images/mobile_background.jpg);
+    transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+    z-index: 0;
+}
+
+.small-leaves .layers .layers__top {
+    display: block;
+    background-image: url(../images/mobile_leaves-top.png);
+    transform: translate3d(calc(var(--scrollTop)/2.5), 0, 0);
+    height: 70%;
+    top: 0;
+}
+
+.small-leaves .layers .layers__bottom {
+    display: block;
+    background-image: url(../images/mobile_leaves-bottom.png);
+    transform: translate3d(0, calc(var(--scrollTop)/5.7), 0);
+    height: 70%;
+    bottom: 0;
+}
+
+
+
+.palm-leaves {
+    min-height: calc(98vh + var(--index));
+    position: relative;
+}
+
+.palm-leaves .layers {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.palm-leaves .layers .layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+    display: block;
+}
+
+.palm-leaves .layers .layers__base {
+    display: block;
+    background-image: url(../images/mobile_palm-background.jpg);
+    transform: translate3d(0, calc(var((100vh + var(--index)))/1.6), 0);
+    z-index: 0;
+}
+
+.palm-leaves .layers .layers__top {
+    display: block;
+    background-image: url(../images/mobile_palm-leaves-top.png);
+    transform: translate3d(calc(var((100vh + var(--index)))/2.5), 0, 0);
+    height: 50%;
+    top: 0;
+}
+
+.palm-leaves .layers .layers__bottom {
+    display: block;
+    background-image: url(../images/mobile_palm-leaves-bottom.png);
+    transform: translate3d(0, calc(var(--scrollTop)/5.7), 0);
+    height: 50%;
+    bottom: 17%;
+}
+
+
+
+/*===================== @media ===================== */
+
+/*---- 768px ----*/
+@media (min-width: 768px) {
+    .header .context {
+        margin-top: calc(var(--index)*49);
+    }
+
+    .palm-leaves .layers .layers__top {
+        height: 62%;
+        top: -13%;
+    }
+}
+
+
+
+/*---- 1024px ----*/
+@media (min-width: 1024px) {
+    .header .context {
+        max-width: calc(var(--index)*35);
+        margin-top: calc(var(--index)*32);
+    }
+
+    .header .context .text {
+        letter-spacing: calc(var(--index)* 0.05);
+    }
+
+    .small-leaves .layers .layers__base {
+        background-image: url(../images/mobile_background.jpg);
+        transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+        z-index: 0;
+    }
+
+    .small-leaves .layers .layers__top,
+    .small-leaves .layers .layers__bottom {
+        display: none;
+    }
+
+    .small-leaves .layers .layers__top-left {
+        display: block;
+        background-image: url(../images/desktop-leaves_top-left.png);
+        transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+        height: 80%;
+        top: -17%;
+        left: 0;
+    }
+
+    .small-leaves .layers .layers__top-right {
+        display: block;
+        background-image: url(../images/desktop-leaves_top-right.png);
+        transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+        height: 80%;
+        top: -17%;
+        right: -7%;
+    }
+
+    .small-leaves .layers .layers__bottom-left {
+        display: block;
+        background-image: url(../images/desktop-leaves_bottom-left.png);
+        transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+        height: 80%;
+        bottom: -8%;
+        left: 0;
+    }
+
+    .small-leaves .layers .layers__bottom-right {
+        display: block;
+        background-image: url(../images/desktop-leaves_bottom-right.png);
+        transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+        height: 80%;
+        bottom: -8%;
+        right: 0;
+    }
+
+
+    .palm-leaves .layers .layers__top,
+    .palm-leaves .layers .layers__bottom {
+        display: none;
+    }
+
+    .palm-leaves .layers .layers__base {
+        background-image: url(../images/desktop_palm-background.jpg);
+    }
+
+    .palm-leaves .layers .layers__left {
+        display: block;
+        background-image: url(../images/desktop_palm-leaves-left.png);
+        transform: translate3d(0, calc(var((100vh + var(--index)))/2.5), 0);
+        height: 100%;
+        top: 0;
+        left: 0%;
+        width: 55%;
+    }
+
+    .palm-leaves .layers .layers__right {
+        display: block;
+        background-image: url(../images/desktop_palm-leaves-right.png);
+        transform: translate3d(0, calc(var((100vh + var(--index)))/2.5), 0);
+        height: 100%;
+        top: 0;
+        right: 0%;
+        margin-top: 0;
+        width: 55%;
+    }
+}
+
+
+
+/*---- 10920px ----*/
+@media (min-width: 1920px) {
+    .header .context {
+        max-width: calc(var(--index)*35);
+        margin-top: calc(var(--index)*29);
+    }
+}

@@ -1,11 +1,13 @@
 name: Deploy to GitHub Pages
 
-on:
+# on: push: Цей блок визначає, що процес деплою почнеться автоматично після пушу в гілку main.
+on:  
   push:
     branches:
       - main  # Виконуй деплой з основної гілки
 
-jobs:
+#jobs: deploy: Тут описані кроки для деплою: Завантажуються файли з репозиторію.Використовується спеціальна дія, яка автоматично публікує сайт на GitHub Pages в гілці gh-pages.
+jobs:  
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -19,6 +21,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: .
-          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages # ця гілка буде використана для деплою
+          folder: .  # папка, де знаходиться твій проект, може бути `.`, якщо він у кореневій папці репозиторію
+          token: ${{ secrets.GITHUB_TOKEN }}   # Використовуй токен для автентифікації
